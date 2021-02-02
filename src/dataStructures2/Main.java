@@ -1,5 +1,7 @@
 package dataStructures2;
 
+import java.util.Arrays;
+
 public class Main {
 	static void sumArray(Integer[] examples) {
 		Integer addedUp = 0;
@@ -8,9 +10,14 @@ public class Main {
 		}
 		System.out.printf("the sum is %d\n", addedUp);
 	}
-//	public static double[] toPower(int size, int power) {
-//		
-//	}
+	public static int[] toPower(int size, int power) {
+		int powerArray[] = new int[size];
+			for (int j = 0; j< size; j++) {
+				powerArray[j]=(int) Math.pow(j, power);	
+			}
+		return powerArray;
+		
+	}
 
 	public static void main(String[] args) {
 		//calling sumArray method
@@ -32,6 +39,9 @@ public class Main {
         }
         //System.out.println(index);
 		
+        
+        //printing the toPower method to see if it works. 
+        System.out.println(Arrays.toString(toPower(4, 2)));
 		
 		
 		
